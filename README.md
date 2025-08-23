@@ -80,9 +80,6 @@ _(Insert ROC curve plot here)_
 - Token activations reshaped into **14×14 patch grid** and upsampled to input size
 - Overlaid heatmaps highlight lung regions most influential for predictions
 
-_(Insert Grad-CAM Normal example here)_  
-_(Insert Grad-CAM Pneumonia example here)_
-
 ---
 
 ## Results
@@ -93,9 +90,9 @@ _(Insert Grad-CAM Pneumonia example here)_
 
 **Example Outputs:**
 
-- ROC Curve → ![ROC Curve](assets/roc_curve.png)
-- Grad-CAM (Normal) → ![Grad-CAM Normal](assets/gradcam_normal.png)
-- Grad-CAM (Pneumonia) → ![Grad-CAM Pneumonia](assets/gradcam_pneumonia.png)
+- **ROC Curve** → ![ROC Curve](assets/roc_curve.png)
+- **Grad-CAM (Normal)** → ![Grad-CAM Normal](assets/gradcam_normal.png)
+- **Grad-CAM (Pneumonia)** → ![Grad-CAM Pneumonia](assets/gradcam_pneumonia.png)
 
 ---
 
@@ -123,4 +120,5 @@ model.to(device)
 model.eval()  # Set the model to evaluation mode if you are using it for inference
 
 ```
+
 
