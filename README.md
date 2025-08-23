@@ -55,16 +55,14 @@ ViT (`vit-base-patch16-224`) offered several advantages:
 ## Model Evaluation
 
 **Classification Report (Test Set – 634 images):**
-precision recall f1-score support
 
-      Normal       0.94      0.99      0.97       317
-
-Pneumonia 0.99 0.94 0.96 317
-
-    accuracy                           0.97       634
-
-macro avg 0.97 0.97 0.97 634
-weighted avg 0.97 0.97 0.97 634
+| Class        | Precision | Recall | F1-Score | Support |
+| ------------ | --------- | ------ | -------- | ------- |
+| Normal       | 0.94      | 0.99   | 0.97     | 317     |
+| Pneumonia    | 0.99      | 0.94   | 0.96     | 317     |
+| **Accuracy** |           |        | **0.97** | 634     |
+| Macro Avg    | 0.97      | 0.97   | 0.97     | 634     |
+| Weighted Avg | 0.97      | 0.97   | 0.97     | 634     |
 
 When reloaded in Grad-CAM notebook:
 
@@ -125,3 +123,4 @@ model.to(device)
 model.eval()  # Set the model to evaluation mode if you are using it for inference
 
 ```
+
