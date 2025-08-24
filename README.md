@@ -29,13 +29,12 @@ ViT (`vit-base-patch16-224`) offered several advantages:
 
 ## Data Preprocessing and Loading
 
-- Images loaded from **Firebase Storage** (or directly from Kaggle folders)
 - Preprocessing pipeline:
   - Resize → 224×224
   - Convert to RGB
   - Normalize with mean = 0.5, std = 0.5 per channel
 - Data balancing: Pneumonia class undersampled to match Normal class
-- Stratified split: **60% train, 20% validation, 20% test**
+- Split: **60% train, 20% validation, 20% test**
 - Loaded via PyTorch `DataLoader` with batch size = 16
 
 ---
@@ -43,7 +42,7 @@ ViT (`vit-base-patch16-224`) offered several advantages:
 ## Model and Training
 
 - **Base Model:** `ViTForImageClassification` (`google/vit-base-patch16-224`)
-- **Head:** Adapted from 1000 classes → 2 classes (Normal, Pneumonia)
+- **Head:** Adapted from 1000 classes → 2 classes for Binary Classification (Normal, Pneumonia)
 - **Loss:** CrossEntropyLoss
 - **Optimizer:** AdamW (lr = 1e-4) with gradient clipping
 - **Device:** CUDA if available
@@ -119,6 +118,7 @@ model.to(device)
 model.eval()  # Set the model to evaluation mode if you are using it for inference
 
 ```
+
 
 
 
