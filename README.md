@@ -70,7 +70,6 @@ When reloaded in Grad-CAM notebook:
 - **Balanced performance:** Precision and recall both ~0.94–0.99
 
 ROC-AUC: Achieved **>0.95**, with well-separated ROC curves for both classes.  
-_(Insert ROC curve plot here)_
 
 ---
 
@@ -88,7 +87,7 @@ _(Insert ROC curve plot here)_
 - Strong precision/recall balance for both Normal and Pneumonia
 - Grad-CAM visualizations confirm the model focuses on clinically relevant lung regions
 
-**Example Outputs:**
+** Outputs:**
 
 - **ROC Curve** → ![ROC Curve](assets/roc_curve.png)
 - **Grad-CAM (Normal)** → ![Grad-CAM Normal](assets/gradcam_normal.png)
@@ -120,5 +119,6 @@ model.to(device)
 model.eval()  # Set the model to evaluation mode if you are using it for inference
 
 ```
+
 
 
