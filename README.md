@@ -6,6 +6,20 @@ The objective of this project is to classify pediatric chest X-rays into **Norma
 
 ---
 
+## Results
+
+- ViT achieved **95–97% accuracy** on test data
+- Strong precision/recall balance for both Normal and Pneumonia
+- Grad-CAM visualizations confirm the model focuses on clinically relevant lung regions
+
+**Outputs:**
+
+- **ROC Curve** → ![ROC Curve](assets/roc_curve.png)
+- **Grad-CAM (Normal)** → ![Grad-CAM Normal](assets/gradcam_normal.png)
+- **Grad-CAM (Pneumonia)** → ![Grad-CAM Pneumonia](assets/gradcam_pneumonia.png)
+
+---
+
 ## Dataset
 
 - **Source:** [Chest X-Ray Images (Pneumonia) – Kaggle](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
@@ -80,20 +94,6 @@ ROC-AUC: Achieved **>0.95**, with well-separated ROC curves for both classes.
 
 ---
 
-## Results
-
-- ViT achieved **95–97% accuracy** on test data
-- Strong precision/recall balance for both Normal and Pneumonia
-- Grad-CAM visualizations confirm the model focuses on clinically relevant lung regions
-
-**Outputs:**
-
-- **ROC Curve** → ![ROC Curve](assets/roc_curve.png)
-- **Grad-CAM (Normal)** → ![Grad-CAM Normal](assets/gradcam_normal.png)
-- **Grad-CAM (Pneumonia)** → ![Grad-CAM Pneumonia](assets/gradcam_pneumonia.png)
-
----
-
 ## How to Run
 
 ### Environment Setup
@@ -118,6 +118,7 @@ model.to(device)
 model.eval()  # Set the model to evaluation mode if you are using it for inference
 
 ```
+
 
 
 
