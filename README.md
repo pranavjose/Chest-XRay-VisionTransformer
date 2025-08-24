@@ -2,7 +2,7 @@
 
 ## Goal
 
-The objective of this project is to classify pediatric chest X-rays into **Normal** or **Pneumonia** using a **Vision Transformer (ViT)** model, while also providing explainability through **Grad-CAM** heatmaps.
+The objective of this project is to classify pediatric chest X-rays into **Normal** or **Pneumonia** using a **Vision Transformer (ViT)** model, while also providing explainability through **Gradient-Weighted Class Activation Mapping (Grad-CAM)** heatmaps.
 
 ---
 
@@ -120,6 +120,7 @@ model.to(device)
 model.eval()  # Set the model to evaluation mode if you are using it for inference
 
 ```
+
 
 
 
